@@ -1,0 +1,133 @@
+:root {
+  --bg: #1e1e1e;
+  --panel: #252526;
+  --text: #ffffff;
+  --editor: #1e1e1e;
+  --tab: #aaa;
+  --preview: #ffffff;
+}
+
+body.light {
+  --bg: #f4f4f4;
+  --panel: #ffffff;
+  --text: #000000;
+  --editor: #f9f9f9;
+  --tab: #333;
+  --preview: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background: #2c2c2c;
+  padding: 10px 20px;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.editor {
+  width: 50%;
+  background: #252526;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  background: #1f1f1f;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.tab.active {
+  color :blue;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.code {
+  flex: 1;
+  background: #1e1e1e;
+  color: rgb(79, 79, 197);
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-family: monospace;
+  font-size: 14px;
+  display: none;
+}
+
+.code.active {
+  display: block;
+}
+
+.preview {
+  width: 50%;
+  background: white;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--panel);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editor {
+  background: var(--panel);
+}
+
+.tabs {
+  background: var(--bg);
+}
+
+.tab {
+  color: var(--tab);
+}
+
+.code {
+  background: var(--editor);
+  color: reminds to keep monospace;
+}
+
+.preview {
+  background: var(--preview);
+}
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle label {
+  cursor: pointer;
+  font-size: 20px;
+}
+

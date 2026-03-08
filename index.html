@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CodeIN - Live Code Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>&lt;/&gt; CodeIN</h1>
+
+  <!-- Theme Toggle -->
+  <div class="toggle">
+    <input type="checkbox" id="themeToggle">
+    <label for="themeToggle">🌙</label>
+  </div>
+</header>
+
+
+<div class="container">
+  <!-- Editor Section -->
+  <div class="editor">
+    <div class="tabs">
+      <button class="tab active" data-tab="html">HTML</button>
+      <button class="tab" data-tab="css">CSS</button>
+      <button class="tab" data-tab="js">JS</button>
+    </div>
+
+    <textarea id="html" class="code active">
+<h1>Hello, Coder!</h1>
+<p>Start coding to see your creation live.</p>
+<button id="myButton">Click me</button>
+    </textarea>
+
+    <textarea id="css" class="code">
+body {
+  font-family: Arial;
+}
+button {
+  padding: 10px 15px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+    </textarea>
+
+    <textarea id="js" class="code">
+document.getElementById('myButton').onclick = function() {
+  alert('Button clicked! Code is running live.');
+};
+    </textarea>
+  </div>
+
+  <!-- Preview Section -->
+  <div class="preview">
+    <iframe id="output"></iframe>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
